@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<style>
+    h2{
+        text-align: center;
+    }
+    table {
+        width: 80%;
+        font-size: 20px;
+        border-collapse: collapse;
+        margin: 0 15%;
+    }
+    th{
+        text-align: center;
+        border: 1px solid black;
+        background-color: wheat;
+    }
+    td{
+        text-align: center;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h2>fetch</h2>
+    <div class="wrap"></div>
+    <script>
+         let txt = '';
+         const wrap =document.querySelector('.wrap')
+            fetch('https://www.7timer.info/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0')
+            .then((response) => {
+                return response.json() // 받아온 객체를 json형식으로 변환 
+            })
+            .then((data)=>{
+                txt+=`
+                    <table>
+                    <tr>
+                    <th>timepoint</th>
+                    <th>cloudcover</th>
+                    <th>seeing</th>
+                    <th>transparency</th>
+                    <th>lifted_index</th>
+                    <th>rh2m</th>
+                    </tr>`
+                for(let i =0;i < data.dataseries.length;i++){
+                   txt+=`
+                    <tr>
+                        <td>${data.dataseries[i].timepoint}</td>
+                        <td>${data.dataseries[i].cloudcover}</td>
+                        <td>${data.dataseries[i].seeing}</td>
+                        <td>${data.dataseries[i].transparency}</td>
+                        <td>${data.dataseries[i].lifted_index}</td>
+                        <td>${data.dataseries[i].rh2m}</td>
+                    </tr>`
+                }
+                txt+="</table>"
+                wrap.innerHTML=txt// innerHTML로 html 코드를 변경해줌
+            })
+
+
+            
+          
+
+    </script>
+
+</body>
+</html>
+
