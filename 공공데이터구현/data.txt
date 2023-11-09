@@ -1,0 +1,22 @@
+총 데이터 갯수 15131
+key = 'MFQhV%2FZRnUepzJxZ%2BHB1FIHAiJdEcnbf5n8u3Jc2UoLAbkogcZekWtdQyVAU7NeMGScZlxkyD%2BZfDvfLyp%2BEVA%3D%3D'
+link = `https://apis.data.go.kr/1741000/TemporaryHousingFacilityVictim3/getTemporaryHousingFacilityVictim1List?serviceKey=${key}&pageNo=1&numOfRows=100&type=json`
+경로 : data.TemporaryHousingFacilityVictim[1].row
+
+acmdfclty_se_cd: "002"
+acmdfclty_se_nm: "마을회관"
+acmdfclty_sn: 156
+arcd: "4888000000"
+bdong_cd: "4888032026"
+ctprvn_nm: "경상남도"
+dtl_adres: "경상남도 거창군 웅양면 금광길 124-34 "
+fclty_ar: 89
+hdong_cd: "4888032000"
+mngps_nm: "김도원" - mngps_nm
+mngps_telno: "010-7900-4455" - 지자체담당자 연락처
+rdnmadr_cd: "4888032026110960000048177"
+sgg_nm: "거창군"
+vt_acmd_psbl_nmpr: 34 - 주거능력
+vt_acmdfclty_nm: "금광마을회관"
+xcord: 127.93805554 - 경도
+ycord: 35.83275587 - 위도
