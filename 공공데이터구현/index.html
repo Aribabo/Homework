@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이재민지도</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <h2>이재민 피난지도</h2>
-    <div id="map" style="width:500px;height:400px;"></div>
+    <div class="container">
+        <div class="menu">
+            <p>서울특별시</p>
+            <p>경기도</p>
+            <p>인천광역시</p>
+            <p>부산광역시</p>
+            <p>대전광역시</p>
+            <p>광주광역시</p>
+            <p>대구광역시</p>
+            <p>울산광역시</p>
+            <p>세종특별자치시</p>
+            <p>강원특별자치도</p>
+            <p>충청북도</p>
+            <p>충청남도</p>
+            <p>경상북도</p>
+            <p>경상남도</p>
+            <p>전라북도</p>
+            <p>전라남도</p>
+            <p>제주특별자치도</p>
+        </div>
+        <div class="mapBox">
+            <div id="map"></div>
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d08635edf4f597837f1f10007baeedd"></script>
-    <script>
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(35.2246964100, 128.5983270000),
-            level: 3
-        };
-        var map = new kakao.maps.Map(container, options);
-        const key = 'MFQhV%2FZRnUepzJxZ%2BHB1FIHAiJdEcnbf5n8u3Jc2UoLAbkogcZekWtdQyVAU7NeMGScZlxkyD%2BZfDvfLyp%2BEVA%3D%3D'
-        const page= 1
-        const link = `https://apis.data.go.kr/1741000/TemporaryHousingFacilityVictim3/getTemporaryHousingFacilityVictim1List?serviceKey=${key}&pageNo=${page}&numOfRows=1000&type=json`
-
-        fetch(link)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data.TemporaryHousingFacilityVictim[1].row)
-        })
-
-    </script>
+    <script src="./index.js"></script>
 </body>
 </html>
