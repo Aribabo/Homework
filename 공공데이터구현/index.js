@@ -13,7 +13,7 @@ async function fetchData() {
     let locationNameArr = []
     // 총 데이터건수 
     for (let page = 1; page <= 16; page++) {
-        const link = `https://apis.data.go.kr/1741000/TemporaryHousingFacilityVictim3/getTemporaryHousingFacilityVictim1List?serviceKey=${key}&pageNo=${page}&numOfRows=1000&type=json`;
+        const link = `http://apis.data.go.kr/1741000/TemporaryHousingFacilityVictim3/getTemporaryHousingFacilityVictim1List?serviceKey=${key}&pageNo=${page}&numOfRows=1000&type=json`;
 
         const response = await fetch(link);
         const data = await response.json();
