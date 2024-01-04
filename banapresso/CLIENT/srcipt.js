@@ -3,7 +3,7 @@ function loadKakaoMapsScript(callback) {
     const script = document.createElement('script');
     script.src = '//dapi.kakao.com/v2/maps/sdk.js?appkey=9d08635edf4f597837f1f10007baeedd';
     script.onload = callback;
-    document.head.appendChild(script);
+    document.head.appendChild(script);. 
 }
 
 
